@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
   <title>Graeme Stewart Watt — Enterprise Systems Architecture &amp; AI Automation Lead</title>
-  <meta name="description" content="Regulated laboratory informatics, SAP financial governance, and deterministic automation.">
+  <meta name="description" content="Regulated laboratory informatics, SAP financial control, and agents doing the boring parts.">
   <meta name="theme-color" content="#090c10">
   <meta property="og:title" content="Graeme Stewart Watt — Enterprise Systems Architecture &amp; AI Automation Lead">
-  <meta property="og:description" content="Regulated laboratory informatics, SAP financial governance, and deterministic automation.">
+  <meta property="og:description" content="Regulated laboratory informatics, SAP financial control, and agents doing the boring parts.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://gsws.space/">
   <meta name="twitter:card" content="summary">
@@ -17,21 +17,13 @@
     :root {
       color-scheme: dark;
       --bg: #090c10;
-      --surface: #10151d;
-      --surface-inset: #0d1117;
+      --bar: #0d1117;
       --text: #e2e8f0;
-      --text-muted: #8b949e;
-      --text-faint: #484f58;
+      --muted: #8b949e;
+      --faint: #484f58;
       --accent: #58a6ff;
-      --accent-soft: rgba(88, 166, 255, 0.1);
-      --accent-soft-hover: rgba(88, 166, 255, 0.2);
       --line: rgba(226, 232, 240, 0.07);
-      --edge-a: rgba(88, 166, 255, 0.3);
-      --edge-b: rgba(226, 232, 240, 0.05);
-      --edge-c: rgba(88, 166, 255, 0.08);
-      --header-veil: rgba(9, 12, 16, 0.88);
       --selection: rgba(88, 166, 255, 0.25);
-      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
     }
 
@@ -39,110 +31,102 @@
       :root {
         color-scheme: light;
         --bg: #f8fafc;
-        --surface: #ffffff;
-        --surface-inset: #f1f5f9;
+        --bar: #eef2f7;
         --text: #0f172a;
-        --text-muted: #475569;
-        --text-faint: #94a3b8;
+        --muted: #475569;
+        --faint: #94a3b8;
         --accent: #2563eb;
-        --accent-soft: rgba(37, 99, 235, 0.06);
-        --accent-soft-hover: rgba(37, 99, 235, 0.12);
         --line: rgba(15, 23, 42, 0.08);
-        --edge-a: rgba(37, 99, 235, 0.25);
-        --edge-b: rgba(15, 23, 42, 0.06);
-        --edge-c: rgba(37, 99, 235, 0.06);
-        --header-veil: rgba(248, 250, 252, 0.88);
         --selection: rgba(37, 99, 235, 0.18);
       }
     }
 
     * { box-sizing: border-box; margin: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: var(--sans); font-size: 1rem; line-height: 1.7; background: var(--bg); color: var(--text); }
+    body { font-family: var(--mono); font-size: 1rem; line-height: 1.7; background: var(--bg); color: var(--text); }
     ::selection { background: var(--selection); }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
     .skip-link {
       position: absolute; left: 1rem; top: -4rem; z-index: 50;
-      padding: 0.55rem 1.1rem; border-radius: 6px;
+      padding: 0.55rem 1.1rem; border-radius: 4px;
       background: var(--accent); color: var(--bg);
-      font-family: var(--mono); font-size: 0.8125rem; text-decoration: none;
+      font-size: 0.8125rem; text-decoration: none;
       transition: top 140ms ease;
     }
     .skip-link:focus { top: 1rem; }
+    .skip-link:hover { text-decoration: none; }
 
-    .container { max-width: 64rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+    .container { max-width: 60rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
 
-    .site-header {
+    .bar {
       position: sticky; top: 0; z-index: 10;
-      background: var(--header-veil); backdrop-filter: blur(12px);
+      background: var(--bar);
       border-bottom: 1px solid var(--line);
+      font-size: 0.8125rem;
     }
-    .site-nav { display: flex; align-items: center; justify-content: space-between; min-height: 4rem; }
-    .wordmark { font-family: var(--mono); font-size: 0.875rem; font-weight: 500; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
-    .wordmark span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; font-family: var(--mono); font-size: 0.75rem; }
-    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 140ms ease; }
-    .nav-links a:hover { color: var(--text); }
+    .bar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 2.75rem; }
+    .session { color: var(--faint); }
+    .session strong { color: var(--text); font-weight: 500; }
+    .session .active { color: var(--accent); }
+    .bar-nav { display: flex; gap: 1.5rem; list-style: none; }
+    .bar-nav a { color: var(--muted); }
+    .bar-nav a:hover { color: var(--text); text-decoration: none; }
 
-    .hero { padding-block: clamp(5rem, 15vh, 8.5rem) clamp(3.5rem, 9vw, 6rem); }
-    .hero-eyebrow { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
-    .hero h1 { font-size: clamp(2.25rem, 5.5vw, 3.8rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.025em; max-width: 28ch; text-wrap: balance; }
-    .hero-lede { margin-top: 1.5rem; max-width: 46ch; font-size: 1.0625rem; color: var(--text-muted); line-height: 1.75; }
-
-    .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.35rem; border-radius: 6px;
-      border: 1px solid transparent; font-family: var(--mono); font-size: 0.8125rem; font-weight: 500;
-      text-decoration: none; transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+    .hero { padding-block: clamp(4rem, 12vh, 7rem) clamp(3rem, 8vw, 5rem); }
+    .prompt { font-size: 0.9375rem; margin-bottom: 1.5rem; }
+    .prompt .dollar { color: var(--faint); }
+    .prompt .cmd { color: var(--text); font-weight: 500; }
+    .prompt .file { color: var(--accent); }
+    .hero h1 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.3; text-wrap: balance; }
+    .role { margin-top: 0.4rem; font-size: 0.9375rem; color: var(--muted); }
+    .manifesto {
+      margin-top: 2.5rem; max-width: 46ch;
+      font-size: clamp(1.125rem, 2.6vw, 1.375rem); line-height: 1.55;
+      color: var(--text); text-wrap: balance;
     }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary { color: var(--accent); background: var(--accent-soft); border-color: var(--edge-a); }
-    .btn-primary:hover { background-color: var(--accent-soft-hover); }
-    .btn-ghost { color: var(--text-muted); border-color: var(--line); background: var(--surface); }
-    .btn-ghost:hover { color: var(--text); border-color: var(--accent); }
-
-    .section { padding-block: clamp(4rem, 10vw, 7rem); border-top: 1px solid var(--line); }
-    .section[id] { scroll-margin-top: 5rem; }
-    .section-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 2.5rem; text-transform: uppercase; }
-
-    .grid { display: grid; gap: 1.5rem; }
-    .pillars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
-    .work-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); }
-
-    .card {
-      padding: 2rem; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
-      position: relative; overflow: hidden;
+    .cursor {
+      display: inline-block; width: 0.55em; height: 1.05em; margin-left: 0.3rem;
+      background: var(--accent); vertical-align: text-bottom;
+      animation: blink 1.1s steps(2, start) infinite;
     }
-    .card::before {
-      content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 100%;
-      background: var(--accent); opacity: 0.4;
-    }
-    .card-index { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); letter-spacing: 0.08em; margin-bottom: 1rem; }
-    .card h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
-    .card p { font-size: 0.9375rem; color: var(--text-muted); line-height: 1.65; }
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
-    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin-top: 1.5rem; }
-    .tags li {
-      padding: 0.2rem 0.55rem; border: 1px solid var(--line); border-radius: 4px;
-      background: var(--surface-inset); font-family: var(--mono); font-size: 0.6875rem; color: var(--text-muted);
-    }
+    .section { padding-block: clamp(3rem, 8vw, 5rem); border-top: 1px solid var(--line); }
+    .section[id] { scroll-margin-top: 3.75rem; }
 
-    .work-meta { display: grid; gap: 0.6rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
-    .work-meta dt { font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-faint); }
-    .work-meta dd { font-family: var(--mono); font-size: 0.8125rem; color: var(--text-muted); }
-    .work-meta .impact dd { color: var(--accent); }
+    .log { list-style: none; display: grid; gap: 1.4rem; }
+    .log li { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; }
+    .log-date { color: var(--faint); }
+    .log-entry { color: var(--muted); border-left: 1px solid var(--line); padding-left: 1rem; }
+    .log-entry .key { color: var(--text); }
 
-    .contact-copy { color: var(--text-muted); max-width: 44ch; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+    .stack { display: grid; gap: 1.1rem; }
+    .stack div { display: grid; grid-template-columns: 14rem 1fr; gap: 1rem; }
+    .stack dt { color: var(--faint); }
+    .stack dd { color: var(--muted); }
 
-    .site-footer { border-top: 1px solid var(--line); padding-block: 2.5rem; font-family: var(--mono); font-size: 0.75rem; color: var(--text-faint); }
-    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
-    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
-    .footer-links a { color: var(--text-muted); text-decoration: none; }
-    .footer-links a:hover { color: var(--text); }
+    .work { list-style: none; }
+    .work li { padding-block: 1.9rem; }
+    .work li:first-child { padding-top: 0; }
+    .work li + li { border-top: 1px solid var(--line); }
+    .work-name { color: var(--text); font-weight: 600; }
+    .work-desc { margin-top: 0.6rem; color: var(--muted); max-width: 70ch; }
+    .work-impact { margin-top: 0.6rem; color: var(--accent); font-size: 0.875rem; }
+
+    .belief { max-width: 52ch; font-size: 1.0625rem; line-height: 1.75; }
+    .belief .md-gt { color: var(--accent); }
+
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1.75rem; list-style: none; font-size: 0.9375rem; }
+
+    .bar-footer { position: static; border-top: 1px solid var(--line); border-bottom: none; font-size: 0.75rem; }
+    .footer-note { color: var(--faint); }
 
     @media (max-width: 40rem) {
-      .nav-links { display: none; }
+      .bar-nav { display: none; }
+      .log li, .stack div { grid-template-columns: 1fr; gap: 0.35rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -156,113 +140,120 @@
   </style>
 </head>
 <body id="top">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">skip to content</a>
 
-  <header class="site-header">
-    <nav class="site-nav container" aria-label="Primary">
-      <a class="wordmark" href="#top">gsw<span>://</span> arch</a>
-      <ul class="nav-links">
-        <li><a href="#architecture">domains</a></li>
-        <li><a href="#systems">systems</a></li>
-        <li><a href="#contact">connect</a></li>
-      </ul>
-    </nav>
+  <header class="bar">
+    <div class="bar-inner container">
+      <a class="session" href="#top">[0] <strong>gsws.space</strong><span class="active">*</span></a>
+      <nav aria-label="Primary">
+        <ul class="bar-nav">
+          <li><a href="#now">now</a></li>
+          <li><a href="#stack">stack</a></li>
+          <li><a href="#work">work</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero container" aria-labelledby="hero-heading">
-      <p class="hero-eyebrow">~/graeme-stewart-watt</p>
-      <h1 id="hero-heading">Engineering structural continuity across industrial and financial backbones.</h1>
-      <p class="hero-lede">Bridging regulated laboratory informatics, SAP financial control models, and deterministic automation pipelines with clean separation of concerns.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Professional Profile <span aria-hidden="true">↗</span></a>
-        <a class="btn btn-ghost" href="https://github.com/digitalgenetics-gh">Source Repos <span aria-hidden="true">↗</span></a>
+      <p class="prompt"><span class="dollar">$</span> <span class="cmd">whoami</span></p>
+      <h1 id="hero-heading">graeme stewart watt</h1>
+      <p class="role">enterprise systems architecture &amp; ai automation lead</p>
+      <p class="manifesto">i drag regulated laboratories into the decade they belong in.<span class="cursor" aria-hidden="true"></span></p>
+    </section>
+
+    <section id="now" class="section" aria-labelledby="now-label">
+      <div class="container">
+        <h2 class="prompt" id="now-label" aria-label="Now log"><span class="dollar">$</span> <span class="cmd">cat</span> <span class="file">now.log</span></h2>
+        <ol class="log">
+          <li>
+            <span class="log-date">2026-11</span>
+            <span class="log-entry"><span class="key">SampleManager v11→v23 upgrade programme</span> — global rollout architecture. the tooling does the mapping; humans keep the signatures.</span>
+          </li>
+          <li>
+            <span class="log-date">2026-11</span>
+            <span class="log-entry"><span class="key">VGL parser exorcism</span> — hand-coded instrument parsers replaced with declared grammars. onboarding measured in hours, not sprints.</span>
+          </li>
+          <li>
+            <span class="log-date">2026-11</span>
+            <span class="log-entry"><span class="key">ELN Migration Workbench in production</span> — Streamlit front, SharePoint destination, dry-run diff before every cutover.</span>
+          </li>
+          <li>
+            <span class="log-date">2026-11</span>
+            <span class="log-entry"><span class="key">FastMCP agents in lab support flows</span> — the boring tickets route themselves now.</span>
+          </li>
+          <li>
+            <span class="log-date">2026-10</span>
+            <span class="log-entry"><span class="key">SAP FI-AA asset register redesign</span> — controls embedded in the data model, not in a PDF nobody reads.</span>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="architecture" class="section" aria-labelledby="architecture-label">
+    <section id="stack" class="section" aria-labelledby="stack-label">
       <div class="container">
-        <h2 class="section-label" id="architecture-label" aria-label="Core architectural domains">// core architectural domains</h2>
-        <div class="grid pillars">
-          <article class="card">
-            <p class="card-index">01 · INFORMATICS</p>
-            <h3>Laboratory Systems &amp; LIMS</h3>
-            <p>Global technical architecture for Thermo Scientific SampleManager LIMS upgrade programmes (v11 to v23), legacy VGL-to-XML ETL migration patterns, and compliant Electronic Lab Notebook data governance under GxP.</p>
-            <ul class="tags">
-              <li>SampleManager LIMS</li>
-              <li>ELN</li>
-              <li>VGL→XML ETL</li>
-              <li>GxP / ALCOA+</li>
-            </ul>
-          </article>
-          <article class="card">
-            <p class="card-index">02 · GOVERNANCE</p>
-            <h3>Financial &amp; Project Controls</h3>
-            <p>Enterprise control architecture spanning SAP FI, Asset Accounting (FI-AA), and Project Systems (PS)—embedding regulatory compliance directly into system state models without administrative drag.</p>
-            <ul class="tags">
-              <li>SAP FI</li>
-              <li>FI-AA</li>
-              <li>SAP PS</li>
-              <li>Audit Architecture</li>
-            </ul>
-          </article>
-          <article class="card">
-            <p class="card-index">03 · AUTOMATION</p>
-            <h3>Agentic &amp; Modern Stack</h3>
-            <p>Zero-dependency Python pipelines, Microsoft Fabric data platforms, Power Platform workflow automation, and autonomous agent orchestration via OpenCode and FastMCP.</p>
-            <ul class="tags">
-              <li>Python</li>
-              <li>Microsoft Fabric</li>
-              <li>REST APIs</li>
-              <li>FastMCP</li>
-            </ul>
-          </article>
-        </div>
+        <h2 class="prompt" id="stack-label" aria-label="Stack"><span class="dollar">$</span> <span class="cmd">cat</span> <span class="file">stack.txt</span></h2>
+        <dl class="stack">
+          <div>
+            <dt>runs in prod</dt>
+            <dd>python · microsoft fabric · samplemanager lims · sap fi/aa/ps · docker/wsl2 · rest apis</dd>
+          </div>
+          <div>
+            <dt>evaluating</dt>
+            <dd>fastmcp orchestration patterns · onelake shortcuts · agent eval harnesses</dd>
+          </div>
+          <div>
+            <dt>retired w/ prejudice</dt>
+            <dd>hand-coded parsers · spreadsheet-driven migrations · &quot;temporary&quot; vba bridges</dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <section id="systems" class="section" aria-labelledby="systems-label">
+    <section id="work" class="section" aria-labelledby="work-label">
       <div class="container">
-        <h2 class="section-label" id="systems-label" aria-label="Production tooling and case studies">// production tooling &amp; case studies</h2>
-        <div class="grid work-grid">
-          <article class="card">
-            <p class="card-index">MODULAR TOOLCHAIN</p>
-            <h3>ELN Migration Workbench</h3>
-            <p>A Python and Streamlit validation framework designed to govern Electronic Lab Notebook migrations to SharePoint. Provides single-scan export profiling, manifest generation, and schema dry-run diffing.</p>
-            <dl class="work-meta">
-              <div><dt>Stack</dt><dd>Python · Streamlit · CSV Manifests · SharePoint APIs</dd></div>
-              <div class="impact"><dt>Impact</dt><dd>→ Compresses manual mapping cycles into repeatable, fully audited migration batches.</dd></div>
-            </dl>
-          </article>
-          <article class="card">
-            <p class="card-index">PARSING BY DECLARATION</p>
-            <h3>Metadata-Driven ETL Pipelines</h3>
-            <p>Replaced brittle, hand-coded legacy VGL instrument integrations with configuration-driven parsing pipelines, emitting standardized, validated XML data streams with complete reconciliation reporting.</p>
-            <dl class="work-meta">
-              <div><dt>Stack</dt><dd>Python · VGL Parsers · XML Schema · ETL Architecture</dd></div>
-              <div class="impact"><dt>Impact</dt><dd>→ Reduces new instrument format onboarding from engineering sprints to configuration hours.</dd></div>
-            </dl>
-          </article>
-        </div>
+        <h2 class="prompt" id="work-label" aria-label="Work"><span class="dollar">$</span> <span class="cmd">ls</span> <span class="file">work/</span></h2>
+        <ul class="work">
+          <li>
+            <p class="work-name">eln-migration-workbench/</p>
+            <p class="work-desc">Streamlit front, SharePoint destination. single-scan export profiling, manifest generation, schema dry-run diffing — every run audited.</p>
+            <p class="work-impact">→ manual mapping cycles compressed into repeatable, audited batches.</p>
+          </li>
+          <li>
+            <p class="work-name">etl-by-declaration/</p>
+            <p class="work-desc">VGL grammars declared, not hand-coded. new instrument formats onboarded by configuration; every batch emits validated XML with reconciliation.</p>
+            <p class="work-impact">→ onboarding from engineering sprints to configuration hours.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="belief" class="section" aria-labelledby="belief-label">
+      <div class="container">
+        <h2 class="prompt" id="belief-label" aria-label="Belief"><span class="dollar">$</span> <span class="cmd">cat</span> <span class="file">belief.md</span></h2>
+        <blockquote class="belief">
+          <p><span class="md-gt" aria-hidden="true">&gt; </span>agents should do the boring parts — transcription, mapping, reconciliation. humans keep the judgement and the signature. in a regulated environment the audit trail is not negotiable. an agent that can&rsquo;t explain what it did is a liability, not a colleague.</p>
+        </blockquote>
       </div>
     </section>
 
     <section id="contact" class="section" aria-labelledby="contact-label">
       <div class="container">
-        <h2 class="section-label" id="contact-label" aria-label="Professional contact">// professional contact</h2>
-        <p class="contact-copy">For architectural consulting, LIMS modernization, or systems integration inquiries, connect directly via professional channels.</p>
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+        <h2 class="prompt" id="contact-label" aria-label="Contact"><span class="dollar">$</span> <span class="cmd">contact</span></h2>
+        <ul class="contact-links">
+          <li><a href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">linkedin ↗</a></li>
+          <li><a href="https://github.com/digitalgenetics-gh">github ↗</a></li>
+        </ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Systems Architecture</p>
-      <ul class="footer-links">
-        <li><a href="https://github.com/digitalgenetics-gh">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">LinkedIn</a></li>
-      </ul>
+  <footer class="bar bar-footer">
+    <div class="bar-inner container">
+      <p class="footer-note session">[0] gsws.space</p>
+      <p class="footer-note">© 2026 · single file · zero requests</p>
     </div>
   </footer>
 </body>
