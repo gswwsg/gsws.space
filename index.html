@@ -4,432 +4,141 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <title>Graeme Stewart Watt — Enterprise Systems Architect &amp; AI Automation Lead</title>
-  <meta name="description" content="Enterprise Systems Architect &amp; AI Automation Lead. Bridging the chasm between laboratory informatics (LIMS, ELN), SAP financial governance (FI/AA/PS), and high-velocity cloud/AI automation.">
-  <meta name="theme-color" content="#0b0e14">
-  <meta property="og:title" content="Graeme Stewart Watt — Enterprise Systems Architect &amp; AI Automation Lead">
-  <meta property="og:description" content="Bridging the chasm between laboratory informatics (LIMS, ELN), SAP financial governance, and high-velocity cloud/AI automation.">
+  <title>Graeme Stewart Watt — Enterprise Systems Architecture &amp; AI Automation Lead</title>
+  <meta name="description" content="Regulated laboratory informatics, SAP financial governance, and deterministic automation.">
+  <meta name="theme-color" content="#090c10">
+  <meta property="og:title" content="Graeme Stewart Watt — Enterprise Systems Architecture &amp; AI Automation Lead">
+  <meta property="og:description" content="Regulated laboratory informatics, SAP financial governance, and deterministic automation.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://gsws.space/">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230b0e14'/%3E%3Ctext%20x='32'%20y='41'%20font-family='Menlo,monospace'%20font-size='22'%20fill='%237aa2f7'%20text-anchor='middle'%3Egsw%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23090c10'/%3E%3Ctext%20x='32'%20y='41'%20font-family='Menlo,monospace'%20font-size='22'%20fill='%2358a6ff'%20text-anchor='middle'%3Egsw%3C/text%3E%3C/svg%3E">
   <style>
     :root {
       color-scheme: dark;
-      --bg: #0b0e14;
-      --surface: #11151d;
-      --surface-inset: #0d1119;
-      --text: #e6e9ef;
-      --text-muted: #9aa3b5;
-      --text-faint: #626b7d;
-      --accent: #7aa2f7;
-      --accent-soft: rgba(122, 162, 247, 0.12);
-      --accent-soft-hover: rgba(122, 162, 247, 0.22);
-      --ok: #56d49b;
-      --line: rgba(230, 233, 239, 0.08);
-      --edge-a: rgba(122, 162, 247, 0.30);
-      --edge-b: rgba(230, 233, 239, 0.07);
-      --edge-c: rgba(122, 162, 247, 0.10);
-      --header-veil: rgba(11, 14, 20, 0.85);
-      --selection: rgba(122, 162, 247, 0.30);
-      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --mono: ui-monospace, "SF Mono", "Cascadia Code", "Segoe UI Mono", "Roboto Mono", Menlo, Consolas, monospace;
+      --bg: #090c10;
+      --surface: #10151d;
+      --surface-inset: #0d1117;
+      --text: #e2e8f0;
+      --text-muted: #8b949e;
+      --text-faint: #484f58;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88, 166, 255, 0.1);
+      --accent-soft-hover: rgba(88, 166, 255, 0.2);
+      --line: rgba(226, 232, 240, 0.07);
+      --edge-a: rgba(88, 166, 255, 0.3);
+      --edge-b: rgba(226, 232, 240, 0.05);
+      --edge-c: rgba(88, 166, 255, 0.08);
+      --header-veil: rgba(9, 12, 16, 0.88);
+      --selection: rgba(88, 166, 255, 0.25);
+      --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
     }
 
     @media (prefers-color-scheme: light) {
       :root {
         color-scheme: light;
-        --bg: #f6f7fa;
+        --bg: #f8fafc;
         --surface: #ffffff;
-        --surface-inset: #f0f2f6;
-        --text: #1a2230;
-        --text-muted: #4d576b;
-        --text-faint: #7d8699;
-        --accent: #3b5bd9;
-        --accent-soft: rgba(59, 91, 217, 0.08);
-        --accent-soft-hover: rgba(59, 91, 217, 0.16);
-        --ok: #1f9d68;
-        --line: rgba(26, 34, 48, 0.10);
-        --edge-a: rgba(59, 91, 217, 0.28);
-        --edge-b: rgba(26, 34, 48, 0.10);
-        --edge-c: rgba(59, 91, 217, 0.08);
-        --header-veil: rgba(246, 247, 250, 0.85);
-        --selection: rgba(59, 91, 217, 0.22);
+        --surface-inset: #f1f5f9;
+        --text: #0f172a;
+        --text-muted: #475569;
+        --text-faint: #94a3b8;
+        --accent: #2563eb;
+        --accent-soft: rgba(37, 99, 235, 0.06);
+        --accent-soft-hover: rgba(37, 99, 235, 0.12);
+        --line: rgba(15, 23, 42, 0.08);
+        --edge-a: rgba(37, 99, 235, 0.25);
+        --edge-b: rgba(15, 23, 42, 0.06);
+        --edge-c: rgba(37, 99, 235, 0.06);
+        --header-veil: rgba(248, 250, 252, 0.88);
+        --selection: rgba(37, 99, 235, 0.18);
       }
     }
 
     * { box-sizing: border-box; margin: 0; }
-
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      font-size: 1rem;
-      line-height: 1.7;
-      background: var(--bg);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
+    body { font-family: var(--sans); font-size: 1rem; line-height: 1.7; background: var(--bg); color: var(--text); }
     ::selection { background: var(--selection); }
-
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-    .container {
-      max-width: 66rem;
-      margin-inline: auto;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
-    }
-
     .skip-link {
-      position: absolute;
-      left: 1rem;
-      top: -4rem;
-      z-index: 50;
-      padding: 0.55rem 1.1rem;
-      border-radius: 8px;
-      background: var(--accent);
-      color: var(--bg);
-      font-family: var(--mono);
-      font-size: 0.8125rem;
-      text-decoration: none;
-      transition: top 160ms ease;
+      position: absolute; left: 1rem; top: -4rem; z-index: 50;
+      padding: 0.55rem 1.1rem; border-radius: 6px;
+      background: var(--accent); color: var(--bg);
+      font-family: var(--mono); font-size: 0.8125rem; text-decoration: none;
+      transition: top 140ms ease;
     }
-
     .skip-link:focus { top: 1rem; }
 
+    .container { max-width: 64rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+
     .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: var(--header-veil);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      position: sticky; top: 0; z-index: 10;
+      background: var(--header-veil); backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
-
-    .site-header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, var(--accent), transparent 72%);
-      opacity: 0.55;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 3.75rem;
-    }
-
-    .wordmark {
-      font-family: var(--mono);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      text-decoration: none;
-    }
-
+    .site-nav { display: flex; align-items: center; justify-content: space-between; min-height: 4rem; }
+    .wordmark { font-family: var(--mono); font-size: 0.875rem; font-weight: 500; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
     .wordmark span { color: var(--accent); }
-
-    .nav-links {
-      display: flex;
-      gap: 1.75rem;
-      list-style: none;
-      font-family: var(--mono);
-      font-size: 0.8125rem;
-    }
-
-    .nav-links a { color: var(--text-muted); text-decoration: none; }
-
+    .nav-links { display: flex; gap: 2rem; list-style: none; font-family: var(--mono); font-size: 0.75rem; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 140ms ease; }
     .nav-links a:hover { color: var(--text); }
 
-    .hero {
-      padding-block: clamp(5rem, 14vh, 8.5rem) clamp(3.75rem, 9vw, 6.75rem);
-      text-align: center;
-    }
+    .hero { padding-block: clamp(5rem, 15vh, 8.5rem) clamp(3.5rem, 9vw, 6rem); }
+    .hero-eyebrow { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 1.25rem; }
+    .hero h1 { font-size: clamp(2.25rem, 5.5vw, 3.8rem); font-weight: 700; line-height: 1.12; letter-spacing: -0.025em; max-width: 28ch; text-wrap: balance; }
+    .hero-lede { margin-top: 1.5rem; max-width: 46ch; font-size: 1.0625rem; color: var(--text-muted); line-height: 1.75; }
 
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: 0.8125rem;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6.5vw, 4.25rem);
-      font-weight: 700;
-      line-height: 1.06;
-      letter-spacing: -0.025em;
-      text-wrap: balance;
-    }
-
-    .tagline {
-      margin-top: 1.1rem;
-      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .hero-lede {
-      margin: 1.75rem auto 0;
-      max-width: 44ch;
-      font-size: 1.0625rem;
-      color: var(--text);
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.875rem;
-      margin-top: 2.5rem;
-    }
-
+    .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-family: var(--mono);
-      font-size: 0.875rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.35rem; border-radius: 6px;
+      border: 1px solid transparent; font-family: var(--mono); font-size: 0.8125rem; font-weight: 500;
+      text-decoration: none; transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
     }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn .arrow { opacity: 0.65; }
-
-    .btn-primary {
-      color: var(--accent);
-      background:
-        linear-gradient(180deg, var(--accent-soft), var(--surface)) padding-box,
-        linear-gradient(165deg, var(--edge-a), var(--edge-b) 46%, var(--edge-c)) border-box;
-    }
-
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { color: var(--accent); background: var(--accent-soft); border-color: var(--edge-a); }
     .btn-primary:hover { background-color: var(--accent-soft-hover); }
-
-    .btn-ghost {
-      color: var(--text-muted);
-      border-color: var(--line);
-    }
-
+    .btn-ghost { color: var(--text-muted); border-color: var(--line); background: var(--surface); }
     .btn-ghost:hover { color: var(--text); border-color: var(--accent); }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 2.25rem;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--text-faint);
-    }
+    .section { padding-block: clamp(4rem, 10vw, 7rem); border-top: 1px solid var(--line); }
+    .section[id] { scroll-margin-top: 5rem; }
+    .section-label { font-family: var(--mono); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 2.5rem; text-transform: uppercase; }
 
-    .status .dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 50%;
-      background: var(--ok);
-      animation: breathe 2.8s ease-in-out infinite;
-    }
-
-    @keyframes breathe {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.35; }
-    }
-
-    .section {
-      padding-block: clamp(3.75rem, 9vw, 6.75rem);
-      border-top: 1px solid var(--line);
-    }
-
-    .section[id] { scroll-margin-top: 4.75rem; }
-
-    .section-label {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: clamp(2rem, 5vw, 3rem);
-    }
-
-    .pull-quote {
-      max-width: 52rem;
-      padding-left: 1.5rem;
-      border-left: 2px solid;
-      border-image: linear-gradient(180deg, var(--accent), transparent) 1;
-      font-size: clamp(1.375rem, 3.2vw, 1.9rem);
-      font-weight: 500;
-      line-height: 1.5;
-      letter-spacing: -0.01em;
-      text-wrap: balance;
-    }
-
-    .pull-quote em { font-style: normal; color: var(--accent); }
-
-    .thesis-support {
-      margin-top: 1.75rem;
-      max-width: 44rem;
-      font-size: 1.0625rem;
-      color: var(--text-muted);
-    }
-
-    .grid { display: grid; gap: 1.25rem; }
-
-    .pillars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
-
-    .work-grid {
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 27rem), 1fr));
-      gap: 1.5rem;
-    }
+    .grid { display: grid; gap: 1.5rem; }
+    .pillars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+    .work-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); }
 
     .card {
-      padding: clamp(1.5rem, 3vw, 2rem);
-      border-radius: 16px;
-      border: 1px solid transparent;
-      background:
-        linear-gradient(var(--surface), var(--surface)) padding-box,
-        linear-gradient(165deg, var(--edge-a), var(--edge-b) 46%, var(--edge-c)) border-box;
+      padding: 2rem; border-radius: 8px; border: 1px solid var(--line); background: var(--surface);
+      position: relative; overflow: hidden;
     }
-
-    .card-index {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
+    .card::before {
+      content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 100%;
+      background: var(--accent); opacity: 0.4;
     }
+    .card-index { font-family: var(--mono); font-size: 0.7rem; color: var(--text-faint); letter-spacing: 0.08em; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .card p { font-size: 0.9375rem; color: var(--text-muted); line-height: 1.65; }
 
-    .card h3 {
-      font-size: 1.375rem;
-      font-weight: 600;
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-      text-wrap: balance;
-    }
-
-    .work-card h3 { font-size: 1.5rem; }
-
-    .card-body {
-      margin-top: 0.875rem;
-      font-size: 0.9375rem;
-      color: var(--text-muted);
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin-top: 1.5rem; }
     .tags li {
-      padding: 0.28rem 0.6rem;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--surface-inset);
-      font-family: var(--mono);
-      font-size: 0.6875rem;
-      color: var(--text-muted);
+      padding: 0.2rem 0.55rem; border: 1px solid var(--line); border-radius: 4px;
+      background: var(--surface-inset); font-family: var(--mono); font-size: 0.6875rem; color: var(--text-muted);
     }
 
-    .work-kind {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--text-faint);
-      margin-bottom: 0.75rem;
-    }
-
-    .work-meta {
-      display: grid;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--line);
-    }
-
-    .work-meta dt {
-      font-family: var(--mono);
-      font-size: 0.6875rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-faint);
-    }
-
-    .work-meta dd {
-      margin-top: 0.2rem;
-      font-family: var(--mono);
-      font-size: 0.8125rem;
-      line-height: 1.6;
-      color: var(--text-muted);
-    }
-
+    .work-meta { display: grid; gap: 0.6rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+    .work-meta dt { font-family: var(--mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-faint); }
+    .work-meta dd { font-family: var(--mono); font-size: 0.8125rem; color: var(--text-muted); }
     .work-meta .impact dd { color: var(--accent); }
 
-    .contact { text-align: center; }
+    .contact-copy { color: var(--text-muted); max-width: 44ch; margin-bottom: 1.5rem; font-size: 0.9375rem; }
 
-    .contact h3 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      text-wrap: balance;
-    }
-
-    .contact-copy {
-      max-width: 38rem;
-      margin: 1rem auto 2.25rem;
-      color: var(--text-muted);
-    }
-
-    .mono-note {
-      margin-top: 1.75rem;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--text-faint);
-    }
-
-    .site-footer { border-top: 1px solid var(--line); padding-block: 2.25rem; }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
-    .footer-mono {
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      color: var(--text-faint);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.25rem;
-      list-style: none;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-    }
-
+    .site-footer { border-top: 1px solid var(--line); padding-block: 2.5rem; font-family: var(--mono); font-size: 0.75rem; color: var(--text-faint); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; }
     .footer-links a { color: var(--text-muted); text-decoration: none; }
-
     .footer-links a:hover { color: var(--text); }
 
     @media (max-width: 40rem) {
@@ -451,77 +160,60 @@
 
   <header class="site-header">
     <nav class="site-nav container" aria-label="Primary">
-      <a class="wordmark" href="#top">gsw<span>://</span></a>
+      <a class="wordmark" href="#top">gsw<span>://</span> arch</a>
       <ul class="nav-links">
-        <li><a href="#thesis">thesis</a></li>
-        <li><a href="#pillars">pillars</a></li>
-        <li><a href="#work">work</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#architecture">domains</a></li>
+        <li><a href="#systems">systems</a></li>
+        <li><a href="#contact">connect</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero container" aria-labelledby="hero-name">
+    <section class="hero container" aria-labelledby="hero-heading">
       <p class="hero-eyebrow">~/graeme-stewart-watt</p>
-      <h1 id="hero-name">Graeme Stewart Watt</h1>
-      <p class="tagline">Enterprise Systems Architect &amp; AI Automation Lead</p>
-      <p class="hero-lede">Bridging the chasm between the systems that run the business — LIMS, ELN, SAP — and the automation that should be running them.</p>
+      <h1 id="hero-heading">Engineering structural continuity across industrial and financial backbones.</h1>
+      <p class="hero-lede">Bridging regulated laboratory informatics, SAP financial control models, and deterministic automation pipelines with clean separation of concerns.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Connect on LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="btn btn-ghost" href="https://github.com/digitalgenetics-gh">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
-      <p class="status"><span class="dot" aria-hidden="true"></span>available for select engagements</p>
-    </section>
-
-    <section id="thesis" class="section" aria-labelledby="thesis-label">
-      <div class="container">
-        <h2 class="section-label" id="thesis-label" aria-label="Thesis">// thesis</h2>
-        <blockquote class="pull-quote">
-          <p>Two worlds run every regulated enterprise: the <em>informatics backbone</em> — LIMS, ELN, SAP — and the <em>automation frontier</em> — Python, APIs, LLM agents. Most organisations treat them as separate planets. <strong>I build the bridge.</strong></p>
-        </blockquote>
-        <p class="thesis-support">Laboratory and financial systems architecture, pointed at modern automation: governance that doesn&rsquo;t slow the business down, and AI that doesn&rsquo;t break compliance.</p>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Professional Profile <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="https://github.com/digitalgenetics-gh">Source Repos <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
-    <section id="pillars" class="section" aria-labelledby="pillars-label">
+    <section id="architecture" class="section" aria-labelledby="architecture-label">
       <div class="container">
-        <h2 class="section-label" id="pillars-label" aria-label="Pillars">// pillars</h2>
+        <h2 class="section-label" id="architecture-label" aria-label="Core architectural domains">// core architectural domains</h2>
         <div class="grid pillars">
           <article class="card">
-            <p class="card-index">01 · enterprise governance &amp; financial control</p>
-            <h3>Control without drag</h3>
-            <p class="card-body">Financial architecture across SAP FI, Asset Accounting and Project Systems, designed so compliance is a property of the system rather than a process bolted on after it. Audit-ready by construction, without the bureaucratic drag.</p>
-            <ul class="tags" aria-label="Focus areas">
-              <li>SAP FI</li>
-              <li>AA</li>
-              <li>PS</li>
-              <li>controls architecture</li>
-              <li>audit</li>
-            </ul>
-          </article>
-          <article class="card">
-            <p class="card-index">02 · laboratory &amp; scientific informatics</p>
-            <h3>The scientific data backbone</h3>
-            <p class="card-body">SampleManager LIMS v11–v23 upgrade programmes, VGL→XML ETL pipelines and ELN migrations — modernising the regulated laboratory backbone without pausing the science.</p>
-            <ul class="tags" aria-label="Focus areas">
+            <p class="card-index">01 · INFORMATICS</p>
+            <h3>Laboratory Systems &amp; LIMS</h3>
+            <p>Global technical architecture for Thermo Scientific SampleManager LIMS upgrade programmes (v11 to v23), legacy VGL-to-XML ETL migration patterns, and compliant Electronic Lab Notebook data governance under GxP.</p>
+            <ul class="tags">
               <li>SampleManager LIMS</li>
               <li>ELN</li>
               <li>VGL→XML ETL</li>
-              <li>GxP</li>
+              <li>GxP / ALCOA+</li>
             </ul>
           </article>
           <article class="card">
-            <p class="card-index">03 · applied AI &amp; modern stack engineering</p>
-            <h3>Automation that ships</h3>
-            <p class="card-body">Python services and REST APIs, Microsoft Fabric data platforms, Docker on WSL2, and autonomous agent orchestration with OpenCode and FastMCP — applied where they move real work.</p>
-            <ul class="tags" aria-label="Focus areas">
+            <p class="card-index">02 · GOVERNANCE</p>
+            <h3>Financial &amp; Project Controls</h3>
+            <p>Enterprise control architecture spanning SAP FI, Asset Accounting (FI-AA), and Project Systems (PS)—embedding regulatory compliance directly into system state models without administrative drag.</p>
+            <ul class="tags">
+              <li>SAP FI</li>
+              <li>FI-AA</li>
+              <li>SAP PS</li>
+              <li>Audit Architecture</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="card-index">03 · AUTOMATION</p>
+            <h3>Agentic &amp; Modern Stack</h3>
+            <p>Zero-dependency Python pipelines, Microsoft Fabric data platforms, Power Platform workflow automation, and autonomous agent orchestration via OpenCode and FastMCP.</p>
+            <ul class="tags">
               <li>Python</li>
-              <li>REST</li>
               <li>Microsoft Fabric</li>
-              <li>Docker</li>
-              <li>WSL2</li>
-              <li>OpenCode</li>
+              <li>REST APIs</li>
               <li>FastMCP</li>
             </ul>
           </article>
@@ -529,62 +221,47 @@
       </div>
     </section>
 
-    <section id="work" class="section" aria-labelledby="work-label">
+    <section id="systems" class="section" aria-labelledby="systems-label">
       <div class="container">
-        <h2 class="section-label" id="work-label" aria-label="Selected work">// selected work</h2>
+        <h2 class="section-label" id="systems-label" aria-label="Production tooling and case studies">// production tooling &amp; case studies</h2>
         <div class="grid work-grid">
-          <article class="card work-card">
-            <p class="work-kind">modular toolchain</p>
+          <article class="card">
+            <p class="card-index">MODULAR TOOLCHAIN</p>
             <h3>ELN Migration Workbench</h3>
-            <p class="card-body">A modular workbench for migrating electronic lab notebook data between platforms: schema mapping, validation, dry-run diffing and cutover automation — with a full audit trail on every run. Migration becomes a repeatable engineering exercise, not a white-knuckle event.</p>
+            <p>A Python and Streamlit validation framework designed to govern Electronic Lab Notebook migrations to SharePoint. Provides single-scan export profiling, manifest generation, and schema dry-run diffing.</p>
             <dl class="work-meta">
-              <div>
-                <dt>stack</dt>
-                <dd>Python · XML schema validation · dry-run diffing · cutover automation</dd>
-              </div>
-              <div class="impact">
-                <dt>impact</dt>
-                <dd>→ months of manual mapping compressed into repeatable, audited runs</dd>
-              </div>
+              <div><dt>Stack</dt><dd>Python · Streamlit · CSV Manifests · SharePoint APIs</dd></div>
+              <div class="impact"><dt>Impact</dt><dd>→ Compresses manual mapping cycles into repeatable, fully audited migration batches.</dd></div>
             </dl>
           </article>
-          <article class="card work-card">
-            <p class="work-kind">parsing by declaration</p>
+          <article class="card">
+            <p class="card-index">PARSING BY DECLARATION</p>
             <h3>Metadata-Driven ETL Pipelines</h3>
-            <p class="card-body">Parsing pipelines configured entirely by metadata: source grammars (VGL) are declared rather than hand-coded, and new formats are onboarded by configuration. Every batch emits validated XML with reconciliation reporting.</p>
+            <p>Replaced brittle, hand-coded legacy VGL instrument integrations with configuration-driven parsing pipelines, emitting standardized, validated XML data streams with complete reconciliation reporting.</p>
             <dl class="work-meta">
-              <div>
-                <dt>stack</dt>
-                <dd>Python · metadata schemas · VGL · XML</dd>
-              </div>
-              <div class="impact">
-                <dt>impact</dt>
-                <dd>→ new source formats onboarded in hours, not sprints</dd>
-              </div>
+              <div><dt>Stack</dt><dd>Python · VGL Parsers · XML Schema · ETL Architecture</dd></div>
+              <div class="impact"><dt>Impact</dt><dd>→ Reduces new instrument format onboarding from engineering sprints to configuration hours.</dd></div>
             </dl>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact" aria-labelledby="contact-label">
+    <section id="contact" class="section" aria-labelledby="contact-label">
       <div class="container">
-        <h2 class="section-label" id="contact-label" aria-label="Contact">// contact</h2>
-        <h3>Start a conversation</h3>
-        <p class="contact-copy">The fastest route is LinkedIn — architecture questions, LIMS or SAP modernisation, or where agents fit in a regulated environment.</p>
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Connect on LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
-        <p class="mono-note">routing: linkedin — no mailto, by design</p>
+        <h2 class="section-label" id="contact-label" aria-label="Professional contact">// professional contact</h2>
+        <p class="contact-copy">For architectural consulting, LIMS modernization, or systems integration inquiries, connect directly via professional channels.</p>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© 2026 Graeme Stewart Watt</p>
-      <p class="footer-mono">super metamodern · single file · zero requests</p>
+      <p>© 2026 Systems Architecture</p>
       <ul class="footer-links">
-        <li><a href="https://github.com/digitalgenetics-gh">github</a></li>
-        <li><a href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">linkedin</a></li>
+        <li><a href="https://github.com/digitalgenetics-gh">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51">LinkedIn</a></li>
       </ul>
     </div>
   </footer>
