@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <title>Graeme Stewart Watt — Systems &amp; Automation</title>
-  <meta name="description" content="No-nonsense enterprise architecture, LIMS migrations, and local automation.">
+  <meta name="description" content="Enterprise architecture, LIMS migrations, and local automation without the corporate pantomime.">
   <meta name="theme-color" content="#090c10">
   <meta property="og:title" content="Graeme Stewart Watt — Systems &amp; Automation">
-  <meta property="og:description" content="No-nonsense enterprise architecture, LIMS migrations, and local automation.">
+  <meta property="og:description" content="Enterprise architecture, LIMS migrations, and local automation without the corporate pantomime.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://gsws.space/">
   <meta name="twitter:card" content="summary">
@@ -22,7 +22,6 @@
       --accent: #58a6ff;
       --line: rgba(226, 232, 240, 0.08);
       --mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-      --sans: system-ui, -apple-system, sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,55 +30,57 @@
       background: var(--bg);
       color: var(--text);
       font-size: 0.9375rem;
-      line-height: 1.6;
-      padding: clamp(1.5rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+      line-height: 1.65;
+      padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem);
     }
 
-    .wrap { max-width: 52rem; margin: 0 auto; }
+    .wrap { max-width: 50rem; margin: 0 auto; }
 
     header {
       border-bottom: 1px solid var(--line);
-      padding-bottom: 2rem;
-      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
 
     .handle {
       color: var(--accent);
       font-size: 0.8125rem;
-      margin-bottom: 0.75rem;
-      text-transform: lowercase;
+      margin-bottom: 0.875rem;
     }
 
     h1 {
-      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      font-size: clamp(1.35rem, 2.7vw, 1.85rem);
       font-weight: 600;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
       margin-bottom: 1rem;
+      color: var(--text);
     }
 
     .lede {
       color: var(--text-muted);
-      max-width: 44ch;
+      max-width: 46ch;
       font-size: 0.875rem;
     }
 
-    section { margin-bottom: 3rem; }
+    section { margin-bottom: 3.5rem; }
 
     h2 {
       font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.15em;
       color: var(--accent);
       margin-bottom: 1.25rem;
     }
 
-    .grid { display: grid; gap: 1rem; }
+    .grid { display: grid; gap: 1.25rem; }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--line);
-      padding: 1.25rem 1.5rem;
-      border-radius: 4px;
+      padding: 1.5rem;
+      border-radius: 6px;
+      border-left: 2px solid var(--accent);
     }
 
     .card h3 {
@@ -97,22 +98,34 @@
     .stack-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.4rem;
       list-style: none;
-      margin-top: 0.75rem;
+      margin-top: 1rem;
     }
 
     .stack-list li {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       background: rgba(88, 166, 255, 0.08);
       color: var(--accent);
-      padding: 0.15rem 0.4rem;
-      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
       border: 1px solid rgba(88, 166, 255, 0.15);
     }
 
-    .channels-note {
+    .axiom {
       font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+
+    .axiom strong { color: var(--text); display: block; margin-bottom: 0.5rem; }
+
+    .channels-note {
+      font-size: 0.8125rem;
       color: var(--text-muted);
       margin-bottom: 1rem;
     }
@@ -120,12 +133,12 @@
     .channels-links {
       display: flex;
       gap: 1.5rem;
-      font-size: 0.875rem;
+      font-size: 0.8125rem;
     }
 
     footer {
       border-top: 1px solid var(--line);
-      padding-top: 1.5rem;
+      padding-top: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -141,28 +154,28 @@
   <div class="wrap">
     <header>
       <div class="handle">~/graeme-stewart-watt</div>
-      <h1>Keep your head down, write clean code, and don't mistake paperwork for progress.</h1>
-      <p class="lede">Enterprise architecture and automation in regulated spaces. Dragging legacy LIMS and SAP backbones into something sensible without the corporate theater.</p>
+      <h1>Do the graft properly, build things that actually run, and never mistake a slide deck for progress.</h1>
+      <p class="lede">Enterprise architecture and automation for people who prefer working code to corporate pantomime. Dragging legacy LIMS and SAP backbones into the modern era without losing our sanity.</p>
     </header>
 
     <main>
       <section>
-        <h2>// the machinery</h2>
+        <h2>// core systems</h2>
         <div class="grid">
           <div class="card">
             <h3>Laboratory Informatics &amp; LIMS</h3>
-            <p>Moving Thermo Scientific SampleManager from v11 to v23. Rewriting messy legacy VGL instrument integrations into structured XML ETL pipelines that don't fall over when the weekend hits.</p>
+            <p>Guiding the global architecture for Thermo Scientific SampleManager upgrades (v11 to v23). Turning stubborn legacy VGL instrument routines into clean, structured XML ETL pipelines that don't throw tantrums when nobody is watching.</p>
             <ul class="stack-list">
               <li>SampleManager LIMS</li>
               <li>ELN Governance</li>
-              <li>VGL → XML</li>
+              <li>VGL → XML ETL</li>
               <li>GxP / ALCOA+</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Financial &amp; Project Controls</h3>
-            <p>Twelve years of SAP FI, Asset Accounting, and Project Systems. Building compliance right into the state machine so the auditors can sleep at night and actual work can get done.</p>
+            <p>A decade-plus of SAP FI, Asset Accounting, and Project Systems. Encoding regulatory compliance directly into the state machine so the auditors can sleep peacefully and the rest of us can get back to building.</p>
             <ul class="stack-list">
               <li>SAP FI</li>
               <li>FI-AA</li>
@@ -172,8 +185,8 @@
           </div>
 
           <div class="card">
-            <h3>Automation &amp; Local Agents</h3>
-            <p>Zero-dependency Python scripts, Microsoft Fabric pipelines, and local agent orchestration via OpenCode and FastMCP. If a task is repetitive and soul-crushing, automate it.</p>
+            <h3>Automation &amp; Agentic Tooling</h3>
+            <p>Forging zero-dependency Python scripts, Microsoft Fabric dataflows, and local agent runtimes via OpenCode and FastMCP. Because if a repetitive task makes you want to stare out the window, it's begging to be automated.</p>
             <ul class="stack-list">
               <li>Python / UV</li>
               <li>Microsoft Fabric</li>
@@ -185,18 +198,18 @@
       </section>
 
       <section>
-        <h2>// ground rules</h2>
+        <h2>// operating axioms</h2>
         <div class="grid">
-          <div class="card">
-            <h3>On AI &amp; Enterprise Governance</h3>
-            <p>Agents do the donkey work—parsing logs, scrubbing metadata, assembling draft reports. Humans keep the judgment and the signature. An audit trail isn't negotiable, and magic bullets don't exist in production.</p>
+          <div class="axiom">
+            <strong>On AI, Automation, and Common Sense</strong>
+            Let the algorithms handle the bureaucratic donkey work—parsing messy logs, formatting metadata, and compiling the tedious reports. Humans keep the critical judgment, the final sign-off, and the right to laugh at the edge cases. An audit trail is non-negotiable; magic bullets are for fairy tales.
           </div>
         </div>
       </section>
 
       <section>
         <h2>// channels</h2>
-        <p class="channels-note">If you have a concrete architectural problem to solve rather than a slide deck to review, get in touch.</p>
+        <p class="channels-note">Got a knotty architectural bottleneck to untangle rather than another endless alignment meeting? Let's talk.</p>
         <div class="channels-links">
           <a href="https://www.linkedin.com/in/graeme-stewart-watt-pmp-ab001a51" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href="https://github.com/digitalgenetics-gh" target="_blank" rel="noopener">GitHub ↗</a>
@@ -206,7 +219,7 @@
 
     <footer>
       <p>© 2026 Graeme Stewart Watt</p>
-      <p>Built with steel blue and common sense.</p>
+      <p>Steel blue, clear logic, and a raised eyebrow.</p>
     </footer>
   </div>
 </body>
